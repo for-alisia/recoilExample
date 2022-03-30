@@ -1,5 +1,5 @@
 import { useRecoilValue } from 'recoil';
-import { goalsState } from '../../recoil/goals.atoms';
+import { goalsState } from './goals.atoms';
 import GoalItem from './Goalitem';
 import AddGoal from './AddGoal';
 import styled from 'styled-components';

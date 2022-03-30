@@ -1,8 +1,7 @@
 import { atom, selector } from 'recoil';
 import { v4 as uuidv4 } from 'uuid';
-import { STATUS } from '../utils/statuses';
-import { FILTERS } from '../utils/filters';
-import { todoListFilterState } from './filter.atoms';
+import { STATUS } from '../../utils/statuses';
+import { FILTERS } from '../../utils/filters';
 
 const testData = [
   { title: 'Card 1', description: 'Some description', status: 'Not started', id: 0 },
@@ -11,13 +10,19 @@ const testData = [
 
 // List of all todos
 export const todoListState = atom({
-  key: 'todoList',
+  key: 'Todo/List',
   default: testData,
+});
+
+// fontVariantAlternates:
+export const todoListFilterState = atom({
+  key: 'Todo.Filter',
+  default: FILTERS.ALL,
 });
 
 // Get stats selector
 export const todoListStatsState = selector({
-  key: 'TodoListStats',
+  key: 'Todo/Stats',
   get: ({ get }) => {
     const todoList = get(todoListState);
     const total = todoList.length;

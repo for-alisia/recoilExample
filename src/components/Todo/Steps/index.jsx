@@ -1,7 +1,7 @@
 import { useRecoilValue } from 'recoil';
-import { todoListStatsState } from '../../recoil/todo.atoms';
+import { todoListStatsState } from '../todo.atoms';
 import { Steps } from 'antd';
-import { STATUS } from '../../utils/statuses';
+import { STATUS } from '../../../utils/statuses';
 import { BulbOutlined, FireOutlined, CheckOutlined, StopOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
 

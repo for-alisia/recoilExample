@@ -1,5 +1,5 @@
-import CurrencyInputs from '../CurrencyInputs';
-import ComissionInput from '../ComissionInput';
+import CurrencyInputs from './CurrencyInputs';
+import ComissionInput from './ComissionInput';
 import styled from 'styled-components';
 
 const CurrencyWrapper = styled.section`

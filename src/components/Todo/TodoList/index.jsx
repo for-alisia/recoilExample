@@ -1,5 +1,5 @@
 import { useRecoilValue } from 'recoil';
-import { filteredTodoListState } from '../../recoil/todo.atoms';
+import { filteredTodoListState } from '../todo.atoms';
 import TodoCard from '../TodoCard';
 import styled from 'styled-components';
 

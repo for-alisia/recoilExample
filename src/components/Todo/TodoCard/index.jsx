@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useSetRecoilState } from 'recoil';
-import { todoListState, changeStatus, changeDescription } from '../../recoil/todo.atoms';
-import { STATUS } from '../../utils/statuses';
+import { todoListState, changeStatus, changeDescription } from '../todo.atoms';
+import { STATUS } from '../../../utils/statuses';
 import { Card, Radio, Button, Input } from 'antd';
 import { EditOutlined, CheckOutlined } from '@ant-design/icons';
 import styled from 'styled-components';

@@ -1,5 +1,5 @@
 import { useRecoilState } from 'recoil';
-import { isComissionEnabledAtom, comissionAtom } from '../../recoil/currency.atoms';
+import { isComissionEnabledAtom, comissionAtom } from '../currency.atoms';
 import { Checkbox, InputNumber } from 'antd';
 import styled from 'styled-components';
 

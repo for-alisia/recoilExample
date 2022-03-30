@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Card, Button, Input } from 'antd';
 import { useRecoilState } from 'recoil';
-import { goalItem } from '../../../recoil/goals.atoms';
+import { goalItem } from '../goals.atoms';
 import { EditOutlined, CheckOutlined } from '@ant-design/icons';
 
 const getIcon = (isEditMode) => (isEditMode ? <CheckOutlined /> : <EditOutlined />);

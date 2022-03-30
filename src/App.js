@@ -1,14 +1,11 @@
 import { RecoilRoot } from 'recoil';
 import { Tabs } from 'antd';
 import Header from './components/Header';
-import AddTodo from './components/AddTodo';
-import TodoList from './components/TodoList';
-import Settings from './components/Settings';
-import TodoSteps from './components/Steps';
+import Todo from './components/Todo';
 import CurrencyExchange from './components/CurrencyExchange';
-
-import './App.css';
 import GoalsList from './components/GoalsList';
+import Users from './components/Users';
+import './App.css';
 
 function App() {
   return (
@@ -18,17 +15,16 @@ function App() {
         <main className="main">
           <Tabs defaultActiveKey="1">
             <Tabs.TabPane tab="Todo" key="1">
-              <h2>TODO LIST</h2>
-              <AddTodo />
-              <TodoSteps />
-              <Settings />
-              <TodoList />
+              <Todo />
             </Tabs.TabPane>
             <Tabs.TabPane tab="Currency" key="2">
               <CurrencyExchange />
             </Tabs.TabPane>
             <Tabs.TabPane tab="Goals" key="3">
               <GoalsList />
+            </Tabs.TabPane>
+            <Tabs.TabPane tab="Users" key="4">
+              <Users />
             </Tabs.TabPane>
           </Tabs>
         </main>

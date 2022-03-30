@@ -1,7 +1,7 @@
 import { Button } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
 import { useSetRecoilState } from 'recoil';
-import { goalsState } from '../../../recoil/goals.atoms';
+import { goalsState } from '../goals.atoms';
 
 const AddGoal = () => {
   const setNewGoal = useSetRecoilState(goalsState);

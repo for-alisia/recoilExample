@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useSetRecoilState } from 'recoil';
-import { todoListState, addTodo } from '../../recoil/todo.atoms';
+import { todoListState, addTodo } from '../todo.atoms';
 import { Input, Button } from 'antd';
 import styled from 'styled-components';
 

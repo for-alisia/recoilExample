@@ -1,6 +1,6 @@
 import { useRecoilState } from 'recoil';
-import { todoListFilterState } from '../../recoil/filter.atoms';
-import { FILTERS } from '../../utils/filters';
+import { todoListFilterState } from '../todo.atoms';
+import { FILTERS } from '../../../utils/filters';
 import { Menu } from 'antd';
 import {
   UnorderedListOutlined,

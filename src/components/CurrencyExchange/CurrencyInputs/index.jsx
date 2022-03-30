@@ -1,5 +1,5 @@
 import { useRecoilState } from 'recoil';
-import { usdAtom, eurSelector } from '../../recoil/currency.atoms';
+import { usdAtom, eurSelector } from '../currency.atoms';
 import { InputNumber } from 'antd';
 import { SwapOutlined } from '@ant-design/icons';
 import styled from 'styled-components';
