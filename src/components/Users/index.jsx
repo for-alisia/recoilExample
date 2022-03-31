@@ -9,6 +9,8 @@ const Users = () => {
       <h2>USERS POSTS</h2>
       <Suspense fallback={<Spin size="large" />}>
         <UserSelect />
+      </Suspense>
+      <Suspense fallback={<Spin size="large" />}>
         <Posts />
       </Suspense>
     </div>
