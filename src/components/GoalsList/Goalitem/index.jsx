@@ -8,7 +8,7 @@ const getIcon = (isEditMode) => (isEditMode ? <CheckOutlined /> : <EditOutlined 
 
 const GoalItem = ({ goalId }) => {
   // Recoil state from familyAtom (here we got atom by id)
-  const [{ description, title }, setItem] = useRecoilState(goalItem(goalId));
+  const [{ description, title, id }, setItem] = useRecoilState(goalItem(goalId));
 
   // Usual React state
   const [isEditMode, setIsEditMode] = useState(false);
@@ -38,13 +38,16 @@ const GoalItem = ({ goalId }) => {
       extra={<Button shape="circle" icon={getIcon(isEditMode)} onClick={modeChangeHandler} />}
       style={{ width: 320 }}
     >
-      <p>
-        {isEditMode ? (
-          <Input value={descriptionInput} onChange={descriptionChangeHandler} />
-        ) : (
-          description
-        )}
-      </p>
+      <div>
+        <p>
+          {isEditMode ? (
+            <Input value={descriptionInput} onChange={descriptionChangeHandler} />
+          ) : (
+            description
+          )}
+        </p>
+        <p>Goal ID: {id}</p>
+      </div>
     </Card>
   );
 };

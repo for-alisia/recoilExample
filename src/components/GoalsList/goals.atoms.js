@@ -12,6 +12,7 @@ export const goalItem = atomFamily({
     return {
       title: 'Add your goal here',
       description: 'Add description here',
+      id: param,
     };
   },
 });

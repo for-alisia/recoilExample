@@ -1,4 +1,5 @@
 import { atom, selector } from 'recoil';
+import { getWeather } from '../../utils/fakeWeatherAPI';
 
 export const currentUserAtom = atom({
   key: 'Users/Current',
@@ -30,5 +31,35 @@ export const userPostsSelector = selector({
       title: title.slice(0, 30),
       body: body.slice(0, 50),
     }));
+  },
+});
+
+export const userStateSelector = selector({
+  key: 'Users/User',
+  get: async ({ get }) => {
+    const userId = get(currentUserAtom);
+    if (userId) {
+      const res = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
+      const user = await res.json();
+
+      return user;
+    }
+
+    return null;
+  },
+});
+
+export const weatherSelector = selector({
+  key: 'Users/Weather',
+  get: async ({ get }) => {
+    const user = get(userStateSelector);
+
+    if (user) {
+      const weather = await getWeather(user.address.city);
+
+      return weather;
+    }
+
+    return null;
   },
 });

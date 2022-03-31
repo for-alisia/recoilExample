@@ -1,6 +1,7 @@
 import { Suspense } from 'react';
 import UserSelect from './UserSelect';
 import Posts from './Posts';
+import WeatherForUser from './Weather';
 import { Spin } from 'antd';
 
 const Users = () => {
@@ -9,6 +10,9 @@ const Users = () => {
       <h2>USERS POSTS</h2>
       <Suspense fallback={<Spin size="large" />}>
         <UserSelect />
+      </Suspense>
+      <Suspense fallback={<Spin size="large" />}>
+        <WeatherForUser />
       </Suspense>
       <Suspense fallback={<Spin size="large" />}>
         <Posts />
